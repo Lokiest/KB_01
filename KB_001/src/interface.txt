@@ -1,0 +1,44 @@
+interface A {
+	method - 2
+}
+
+interface B extends A {
+	method - 3
+}
+
+interface C {
+	method - 1
+}
+
+class Parent {
+	public void aa() {}
+	public void bb() {}
+}
+///////////////////////////////////
+class Test implements A {
+//	2개의 메소드 재정의 필요 - abstract은 버리고 기능을 추가
+}
+	A a = new Test();
+
+class Test2 extends Parent implements B {
+	5개의 메소드 재정의 필요 - 소스가 길어진다는 단점
+}
+	Parent p = new Test2();
+	B b = new Test2();
+	A a = new Test2();
+
+class Test3 extends Parent implements B, C {
+	6개의 메소드 재정의 필요 - 소스가 길어진다는 단점
+}
+	C c = new Test2();
+
+
+
+1) is a - 상속(extends), 구현(implements) - 줄선 화살표
+2) has a - 멤버필드, 지역변수 - 점선 화살표
+
+* classDiagram : 객체가 가지고 있는 속성 + 생성자 + 메소드를 표현해주고 객체와 객체간의 관계 나타내는 그림
+
+1) List : 순서 있고 중복 가능 (ArrayList, Vector, LinkedList ... )
+2) Set : 순서 없고 중복 불가 (HashSet, TreeSet > element 정렬 ... )
+3) Map : key, value 쌍으로 이루어지며 key는 중복 불가, value는 중복가능 (HashMap, Hashtable, TreeMap, Properties ... )
